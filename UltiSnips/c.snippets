@@ -1,0 +1,40 @@
+snippet ! "File Header" b
+/*------------------------------------------------------
+ *
+ *  ${1:filename}
+ *  ${2:project name}
+ *
+ *  Created by Armour on `date +%d/%m/%Y`
+ *  Copyright (c) 2015 Armour. All rights reserved.
+ *
+ *------------------------------------------------------
+ */
+
+$3
+endsnippet
+
+snippet main "main function" b
+int main(int argc, char *argv[]) {
+    $1
+    return 0;
+}
+endsnippet
+
+snippet // "add one line comment"
+/* $1 */
+endsnippet
+
+snippet / "add function comment" b
+/*
+ * Function: ${1:funtion name}
+ * -------------------
+ *   ${2:Detial here}
+ *
+ *   Parameters:
+ *      ${3:no parameters}
+ *
+ *   Returns:
+ *      ${4:void}
+ */
+$5
+endsnippet

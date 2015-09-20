@@ -1,0 +1,34 @@
+snippet article "documentclass{article}" b
+\documentclass{article}
+\title{$1}
+\author{$2}
+\date{\today}
+\begin{document}
+\tableofcontents
+\maketitle
+$3
+\end{document}
+endsnippet
+
+snippet table "add a table use booktabs" b
+\begin{tabular}{llr}
+    \toprule
+    $1 \\
+    \midrule
+    $2 \\
+    \bottomrule
+    $3 \\
+\end{tabular}
+endsnippet
+
+snippet bold "bold text"
+\textbf{$1}
+endsnippet
+
+snippet italic "italic text"
+\textit{$1}
+endsnippet
+
+snippet latex "LaTeX"
+\LaTeX
+endsnippet

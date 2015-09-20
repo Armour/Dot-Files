@@ -1,0 +1,16 @@
+[user]
+	name = Armour
+	email = 497052684@qq.com
+[core]
+	excludesfile = /Users/armour/.gitignore_global
+	editor = mvim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[merge]
+	tool = opendiff
