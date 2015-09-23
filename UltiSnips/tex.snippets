@@ -1,23 +1,35 @@
 snippet article "documentclass{article}" b
+\RequirePackage[l2tabu, orthodox]{nag}
+
 \documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
 \title{$1}
 \author{$2}
 \date{\today}
+
 \begin{document}
 \tableofcontents
 \maketitle
+
 $3
+
 \end{document}
 endsnippet
 
 snippet table "add a table use booktabs" b
-\begin{tabular}{llr}
-    \toprule
-    $1 \\
+\\begin{tabular}{${1:lcr}}
+    \\toprule
+    ${2:\multicolumn\{${3:2}\}\{${4:c}\}\{${5:Content}\}} \\\\
+    ${6:\cmidrule(${7:r})\{${8:1-2}\}}
+    $9 \\\\
     \midrule
-    $2 \\
+    $10 \\\\
     \bottomrule
-    $3 \\
+    $11 \\\\
 \end{tabular}
 endsnippet
 
@@ -31,4 +43,10 @@ endsnippet
 
 snippet latex "LaTeX"
 \LaTeX
+endsnippet
+
+snippet minipage "Insert a minipage" b
+\begin{minipage}{${1:0.5\linewidth}}
+${2:\centering}
+\end{minipage}
 endsnippet
