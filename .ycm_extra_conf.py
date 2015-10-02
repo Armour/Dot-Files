@@ -35,55 +35,27 @@ import ycm_core
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
-  '-Wall'            # The Wmissing-braces is useless in c++11
+  '-Wall'
 , '-Wextra'
-#, '-Werror'          # Fucking unused parameter argc!!!
-, '-Wc++98-compat'   # Well i love c++11!!!
+, '-Wc++11-compat'
 , '-Wno-long-long'
 , '-Wno-variadic-macros'
 , '-fexceptions'
 , '-DNDEBUG'
-, '-DUSE_CLANG_COMPLETER'
-# THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
-# language to use when compiling headers. So it will guess. Badly. So C++
-# headers will be compiled as C headers. You don't want that so ALWAYS specify
-# a "-std=<something>".
-# For a C project, you would set this to something like 'c99' instead of 'c++11'.
 , '-std=c++11'
-# ...and the same thing goes for the magic -x option which specifies the
-# language that the files to be compiled are written in. This is mostly
-# relevant for c++ headers.
-# For a C project, you would set this to 'c' instead of 'c++'.
-, '-x'
-, 'c++'
-, '-isystem'
-, '../BoostParts'
-, '-isystem'
-, '/System/Library/Frameworks/Python.framework/Headers' # This path will only work on OS X, but extra paths that don't exist are not harmful
-, '-isystem'
-, '../llvm/include'
-, '-isystem'
-, '../llvm/tools/clang/include'
-, '-I'
-, '.'
-, '-I'
-, './ClangCompleter'
-, '-isystem'
-, './tests/gmock/gtest'
-, '-isystem'
-, './tests/gmock/gtest/include'
-, '-isystem'
-, './tests/gmock'
-, '-isystem'
-, './tests/gmock/include'
-, '-I'
-, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1'
-, '-I'
-, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
-, '-I'
-, '/usr/include'
-, '-I'
-, '/usr/local/include'
+, '-x' , 'c++'
+, '-I' , '.'
+, '-I' , './include'
+, '-isystem' , '/usr/local/Frameworks/Python.framework/Headers'
+, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
+, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/include'
+, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'
+, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include'
+, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks'
+, '-isystem' , '/usr/local/include'
+#, '-I' , '/usr/local/Cellar/postgresql/9.4.4/include/server'
+#, '-I' , '/usr/local/Cellar/boost/1.58.0/include/boost'
+#, '-I' , '/usr/local/Cellar/bullet/2.83.6/include/bullet'
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
@@ -149,9 +121,6 @@ def FlagsForFile( filename ):
     'flags': final_flags,
     'do_cache': True
   }
-# NOTE Things I marked as TODO is not nessessary means I
-#      will do it myself someday. It could be a suggestion
-#      for anyone interested in it.
 
 # NOTE for Linux user
 # Qt common flags
