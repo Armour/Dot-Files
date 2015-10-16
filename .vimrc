@@ -165,6 +165,9 @@ let g:user_emmet_settings = {
     \ 'haml' : {
         \ 'extends' : 'html',
     \ },
+    \ 'ejs' : {
+        \ 'extends' : 'html',
+    \ }
     \}
 
 " Ctrlp Settings
