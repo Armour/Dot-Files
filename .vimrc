@@ -298,8 +298,8 @@ let g:UltiSnipsEditSplit = "vertical"
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'tagbar', 'taglist', 'vimtex']
 
 " Expand region Settings
-noremap <SPACE> <Plug>(expand_region_expand)
-noremap <S-SPACE> <Plug>(expand_region_shrink)
+" noremap <SPACE> <Plug>(expand_region_expand)
+" noremap <S-SPACE> <Plug>(expand_region_shrink)
 
 "====================================================================================================
 
@@ -326,10 +326,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'vim-scripts/dbext.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'SQLComplete.vim'
+"Plugin 'vim-scripts/dbext.vim'
+"Plugin 'SQLComplete.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
@@ -351,7 +351,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'lervag/vimtex'
 Plugin 'Armour/numbers.vim'
 Plugin 'briancollins/vim-jst'
-Plugin 'terryma/vim-expand-region'
+"Plugin 'terryma/vim-expand-region'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
