@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cp ./vimrc ~
+cp ./.vimrc ~
 cp ./.editorconfig ~
 cp ./.gitconfig ~
 cp ./.zshenv ~
