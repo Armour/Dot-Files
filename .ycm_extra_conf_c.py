@@ -52,6 +52,7 @@ flags = [
 , '-isystem' , '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'
 , '-isystem' , '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include'
 , '-isystem' , '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks'
+#, '-isystem' , '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks'
 , '-isystem' , '/usr/local/include'
 #, '-I' , '/usr/local/Cellar/postgresql/9.4.4/include/server'
 #, '-I' , '/usr/local/Cellar/boost/1.58.0/include/boost'

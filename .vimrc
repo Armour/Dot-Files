@@ -40,8 +40,16 @@ set nowb
 set noswapfile
 
 " highlight macros
-syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
-hi definedmarcos guifg = #111111
+autocmd FileType cpp syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
+autocmd FileType c syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
+autocmd FileType m syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
+autocmd FileType mm syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
+autocmd FileType h syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
+autocmd FileType cpp hi definedmarcos guifg = #cb4515
+autocmd FileType c hi definedmarcos guifg = #cb4515
+autocmd FileType m hi definedmarcos guifg = #cb4515
+autocmd FileType mm hi definedmarcos guifg = #cb4515
+autocmd FileType h hi definedmarcos guifg = #cb4515
 
 " IndentLine Settings
 set list " show tab and space
@@ -197,8 +205,8 @@ inoremap <expr><CR> pumvisible() ? "\<C-y>" : "\<CR>" "回车即选中当前项
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_error_symbol = '!'
+let g:syntastic_warning_symbol = '?'
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
