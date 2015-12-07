@@ -11,10 +11,6 @@ set autoindent
 set smarttab
 set smartindent
 
-" to avoid short code warning
-set shortmess=a
-set cmdheight=2
-
 " replace tab with 4 spaces
 set softtabstop=4
 set shiftwidth=4
@@ -28,6 +24,10 @@ set showmatch
 set lines=2560 columns=1600
 set whichwrap=b,s,<,>,[,]
 set guifont=Sauce\ Code\ Powerline:h14
+
+" to avoid short code warning
+set shortmess=a
+set cmdheight=2
 
 " encoding
 set termencoding=utf-8
@@ -54,24 +54,11 @@ autocmd FileType h hi definedmarcos guifg = #cb4515
 " IndentLine Settings
 set list " show tab and space
 set lcs=tab:\┆\ ,nbsp:%,trail:-
-" autocmd bufenter * highlight allTab guifg=#4D4D4D
-" autocmd winenter * highlight allTab guifg=#4D4D4D
-" autocmd bufenter * match allTab /\t/  " match tab
-" autocmd winenter * match allTab /\t/  " match tab
-" autocmd bufenter * highlight firstTab guifg=#022B35 guibg=#022B35
-" autocmd winenter * highlight firstTab guifg=#022B35 guibg=#022B35
-" autocmd bufenter * match firstTab /^[\t][\t]*/  " match firsttab
-" autocmd winenter * match firsttab /^[\t][\t]*/  " match firsttab
-" let g:indentLine_color_gui = '#4D4D4D'
 let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
 
 " Javascript Settings
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
-" SQL Completion
-let g:sql_type_default = 'mysql'
-let g:dbext_default_profile_mySQL = 'type=MYSQL:user=orz:passwd=123456:dbname=test'
 
 " Tablularize
 nnoremap <Leader>a= :Tab /=<CR>
@@ -144,16 +131,16 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Ctags Settings
-let Tlist_Ctags_Cmd ='/usr/local/Cellar/ctags/5.8_1/bin/ctags'  " 设置ctags的位置，指向用homebrew安装的。
+let Tlist_Ctags_Cmd ='/usr/local/Cellar/ctags/5.8_1/bin/ctags'  " set up ctags dir which installed by homebrew
 
 " Taglist Settings
-let Tlist_Use_Right_Window = 1 " 让taglist窗口出现在Vim的右边
-let Tlist_File_Fold_Auto_Close = 1 " 当同时显示多个文件中的tag时，设置为1，可使taglist只显示当前文件tag，其它文件的tag都被折叠起来。
-let Tlist_Show_One_File = 1 " 只显示一个文件中的tag，默认为显示多个
-let Tlist_Sort_Type ='name' " Tag的排序规则，以名字排序。默认是以在文件中出现的顺序排序
-let Tlist_GainFocus_On_ToggleOpen = 1 " Taglist窗口打开时，立刻切换为有焦点状态
-let Tlist_Exit_OnlyWindow = 1 " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_WinWidth = 32 " 设置窗体宽度为32，可以根据自己喜好设置
+let Tlist_Use_Right_Window = 1 " let taglist be in the right window of vim
+let Tlist_File_Fold_Auto_Close = 1 " fold other file's taglist
+let Tlist_Show_One_File = 1 " only show one tag
+let Tlist_Sort_Type ='name' " sort by name
+let Tlist_GainFocus_On_ToggleOpen = 1 " autofocus when open
+let Tlist_Exit_OnlyWindow = 1 " exit vim when closing iff this is the only window
+let Tlist_WinWidth = 32 "
 nnoremap <F2> :TlistToggle <CR>
 
 " Tagbar Settings
@@ -193,13 +180,13 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 " YouCompleteMe settings
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F4> :YcmForceCompileAndDiagnostics<CR>
-set completeopt=longest,menu "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt=longest,menu
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_complete_in_comments = 1 "在注释输入中也能补全
-let g:ycm_complete_in_strings = 1 "在字符串输入中也能补全
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_key_invoke_completion = '<S-Space>'
-inoremap <expr><CR> pumvisible() ? "\<C-y>" : "\<CR>" "回车即选中当前项
+inoremap <expr><CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " Syntastic Settings
 set statusline+=%#warningmsg#
@@ -251,15 +238,6 @@ if has("persistent_undo")
     set undofile
 endif
 
-" Fugitive
-nnoremap <leader>gs :Gstatus
-nnoremap <leader>gd :Gdiff
-nnoremap <leader>gc :Gcommit
-nnoremap <leader>gb :Gblame
-nnoremap <leader>gl :Glog
-nnoremap <leader>gps :Git push
-nnoremap <leader>gpl :Git pull
-
 " Vim Move (move lines up and down)
 let g:move_key_modifier = 'D' " use ctl key
 
@@ -305,10 +283,6 @@ let g:UltiSnipsEditSplit = "vertical"
 " Line Number Settings
 let g:numbers_exclude = ['unite', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'tagbar', 'taglist', 'vimtex']
 
-" Expand region Settings
-" noremap <SPACE> <Plug>(expand_region_expand)
-" noremap <S-SPACE> <Plug>(expand_region_shrink)
-
 "====================================================================================================
 
 "Vundle below
@@ -324,6 +298,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'gmarik/sudo-gui.vim'
+Plugin 'Armour/numbers.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -336,8 +311,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'vim-scripts/dbext.vim'
-"Plugin 'SQLComplete.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
@@ -348,7 +321,6 @@ Plugin 'einars/js-beautify'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
-Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
@@ -357,13 +329,12 @@ Plugin 'tpope/vim-repeat'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-haml'
 Plugin 'lervag/vimtex'
-Plugin 'Armour/numbers.vim'
 Plugin 'briancollins/vim-jst'
-"Plugin 'terryma/vim-expand-region'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore Plugin indent changes, instead use:
 "filetype Plugin on
 "
@@ -379,7 +350,7 @@ filetype plugin indent on    " required
 
 "==========================================================================================
 
-" <F5>编译和运行C程序
+" <F5> compile and run c/c++/python/java/html/go/mkd
 noremap <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     exec "w"
@@ -406,7 +377,7 @@ func! CompileRunGcc()
     endif
 endfunc
 
-"C,C++的调试
+" <F8> Gdb for C,C++
 noremap <F8> :call Rungdb()<CR>
 func! Rungdb()
     exec "w"
@@ -414,7 +385,7 @@ func! Rungdb()
     exec "!gdb ./%<"
 endfunc
 
-" buffer 切换
+" buffer quick switch
 nnoremap b1 :1b<CR>
 nnoremap b2 :2b<CR>
 nnoremap b3 :3b<CR>
@@ -465,7 +436,7 @@ function! GetPotionFold(lnum)
     endif
 endfunction
 
-" Delete all white space in the end of line
+" delete all white space in the end of line / replace all tab with four spaces
 noremap <leader><space> :execute "%s/\\s\\+$//g"<CR>
 noremap <leader><CR> :execute "%s/\\r\\+$//g"<CR>
 noremap <leader><Tab> :execute "%s/\\t/    /g"<CR>
