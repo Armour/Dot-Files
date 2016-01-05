@@ -7,9 +7,10 @@ let maplocalleader = ","
 
 " basic config
 set autoread
-set autoindent
-set smarttab
 set smartindent
+set showmatch
+" set autoindent
+" set smarttab
 
 " replace tab with 4 spaces
 set softtabstop=4
@@ -20,24 +21,22 @@ set expandtab
 " display and font
 set cul
 set number
-set showmatch
 set lines=2560 columns=1600
-set whichwrap=b,s,<,>,[,]
 set guifont=Sauce\ Code\ Powerline:h14
+
+" encoding
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gbk,cp936,gb2312,gb18030,big5,euc-jp,euc-kr,latin1
+
+" backup
+set nobackup
+set noswapfile
+set nowritebackup
 
 " to avoid short code warning
 set shortmess=a
 set cmdheight=2
-
-" encoding
-set termencoding=utf-8
-set encoding=utf8
-set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
-
-" backup
-set nobackup
-set nowb
-set noswapfile
 
 " highlight macros
 autocmd FileType cpp syn match definedmarcos "\v\w@<!(\u|_+[A-Z0-9])[A-Z0-9_]*\w@!"
@@ -79,12 +78,11 @@ let g:AutoPairsShortcutJump = '<Leader>n'  " next end
 let g:AutoPairsShortcutFastWrap = '<Leader>w' " fast wrap
 
 " NERDTree Settings
-let NERDChristmasTree = 1
 let NERDTreeWinPos = 'left'
-let NERDTreeQuitOnOpen = 1
 let NERDTreeDirArrows = 1
-let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
 let NERDTreeShowLineNumbers = 1
+let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeCascadeOpenSingleChildDir = 1
 let NERDTreeIgnore = ['\.DS_Store', '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$']
@@ -175,7 +173,7 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll)$',
     \ 'link': 'some_bad_symbolic_links',
     \ }
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip            " MacOSX/Linux
 
 " YouCompleteMe settings
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -231,15 +229,15 @@ map <Leader>k <Plug>(easymotion-k)
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 let g:EasyMotion_smartcase = 1 " this make v => V but V => V only
 
+" Vim Move (move lines up and down)
+let g:move_key_modifier = 'D' " use cmd key
+
 " Undotree
 nnoremap <F1> :UndotreeToggle<CR>
 if has("persistent_undo")
     set undodir='~/.undodir/'
     set undofile
 endif
-
-" Vim Move (move lines up and down)
-let g:move_key_modifier = 'D' " use ctl key
 
 " Latex
 let g:vimtex_enabled = 1
@@ -381,8 +379,13 @@ endfunc
 noremap <F8> :call Rungdb()<CR>
 func! Rungdb()
     exec "w"
-    exec "!g++ % -g -o %<"
-    exec "!gdb ./%<"
+    if &filetype == 'c'
+        exec "!gcc % -g -o %<"
+        exec "!gdb ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ -std=c++11 % -g -o %<"
+        exec "!gdb ./%<"
+    endif
 endfunc
 
 " buffer quick switch
@@ -454,8 +457,7 @@ nnoremap <D-[> <C-w>h
 nnoremap <D-]> <C-w>l
 
 " cp map
-nnoremap <silent> <Plug>ChangeTwoCharPosition xp
-            \:call repeat#set("\<Plug>ChangeTwoCharPosition")<CR>
+nnoremap <silent> <Plug>ChangeTwoCharPosition xp :call repeat#set("\<Plug>ChangeTwoCharPosition")<CR>
 nnoremap cp <Plug>ChangeTwoCharPosition
 
 " insert one line without stay in insert mode
