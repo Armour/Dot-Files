@@ -13,9 +13,9 @@ set showmatch
 " set smarttab
 
 " replace tab with 4 spaces
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set tabstop=4
 set expandtab
 
 " display and font
@@ -321,12 +321,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'craigemery/vim-autotag'
 Plugin 'tpope/vim-repeat'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-haml'
-Plugin 'lervag/vimtex'
 Plugin 'briancollins/vim-jst'
 
 " All of your Plugins must be added before the following line

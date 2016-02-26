@@ -154,6 +154,6 @@ alias FUCK='fuck'
 alias ycmc='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf_c.py .'
 alias ycmcpp='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py .'
 
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+#[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [[ -n "$SSH_CLIENT" ]] || export DEFAULT_USER="armour"
-
