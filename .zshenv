@@ -45,7 +45,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew bower coffee encode64 gem git git-extras git-flow npm node osx pip pod pyenv python sudo supervisor urltools wd web-search zsh-syntax-highlighting)
+plugins=(autojump brew bower encode64 gem git git-extras git-flow npm node osx pip pod pyenv python sudo supervisor urltools wd zsh-syntax-highlighting)
 
 # User configuration
 
@@ -55,8 +55,7 @@ export MONO_GAC_PREFIX="/usr/local" # To use the assemblies from other formulae 
 export PGDATA="/usr/local/var/postgres"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-source $ZSH/oh-my-zsh.sh # seems it already include PYENV
-#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # Add PYENV to PATH~
+source $ZSH/oh-my-zsh.sh  # Add oh-my-zsh
 source $(brew --prefix nvm)/nvm.sh  # Add NVM to PATH~
 source /usr/local/Cellar/dnvm/1.0.0-dev/libexec/dnvm.sh
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -155,5 +154,4 @@ alias ycmc='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf_c.py .'
 alias ycmcpp='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py .'
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-#[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [[ -n "$SSH_CLIENT" ]] || export DEFAULT_USER="armour"

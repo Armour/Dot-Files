@@ -10,7 +10,6 @@ set autoread
 set smartindent
 set showmatch
 " set autoindent
-" set smarttab
 
 " replace tab with 4 spaces
 set tabstop=4
