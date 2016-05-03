@@ -71,10 +71,9 @@ nnoremap <Leader>a<Bar> :Tab /<Bar><CR>
 vnoremap <Leader>a<Bar> :Tab /<Bar><CR>
 
 " Auto-pair
-let g:AutoPairsFlyMode = 1 " turn fly mode on
-let g:AutoPairsShortcutBackInsert = '<Leader>b'  " back insert
-let g:AutoPairsShortcutJump = '<Leader>n'  " next end
-let g:AutoPairsShortcutFastWrap = '<Leader>w' " fast wrap
+let g:AutoPairsShortcutBackInsert = '<Leader>b'     " back insert
+let g:AutoPairsShortcutJump = '<Leader>n'           " next end
+let g:AutoPairsShortcutFastWrap = '<Leader>w'       " fast wrap
 
 " NERDTree Settings
 let NERDTreeWinPos = 'left'
@@ -294,7 +293,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
-Plugin 'gmarik/sudo-gui.vim'
 Plugin 'Armour/numbers.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'

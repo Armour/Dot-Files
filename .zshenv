@@ -45,7 +45,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew bower encode64 gem git git-extras git-flow npm node osx pip pod pyenv python sudo supervisor urltools wd zsh-syntax-highlighting)
+plugins=(autojump brew bower encode64 gem git git-extras git-flow npm nvm node osx pip pod pyenv python sudo supervisor urltools wd zsh-syntax-highlighting)
 
 # User configuration
 
@@ -121,6 +121,8 @@ alias LLA='ls -al'
 alias py='python'
 alias rb='ruby'
 alias gs='git status'
+alias gcc='gcc-5'
+alias g++='g++-5'
 alias -s html=mvim
 alias -s java=mvim
 alias -s json=mvim
@@ -152,6 +154,7 @@ alias fuck='$(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
 alias ycmc='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf_c.py .'
 alias ycmcpp='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py .'
+alias gsed=sed
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 [[ -n "$SSH_CLIENT" ]] || export DEFAULT_USER="armour"
