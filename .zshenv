@@ -98,6 +98,7 @@ if [[ "$ENABLE_CORRECTION" == "true" ]]; then
   setopt correct_all
 fi
 
+alias sudo='sudo '
 alias zshconf='mvim ~/.zshenv'
 alias vimconf='mvim ~/.vimrc'
 alias szsh='source ~/.zshenv'
