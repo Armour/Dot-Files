@@ -50,9 +50,11 @@ plugins=(autojump brew bower encode64 gem git git-extras git-flow npm nvm node o
 # User configuration
 
 export NVM_DIR=~/.nvm
-export JAVA_HOME="`/usr/libexec/java_home -v 1.7`"
+# export JAVA_HOME="`/usr/libexec/java_home -v 1.7`"
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export MONO_GAC_PREFIX="/usr/local" # To use the assemblies from other formulae (mono)
 export PGDATA="/usr/local/var/postgres"
+export PYENV_ROOT="/usr/local/var/pyenv"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh  # Add oh-my-zsh
