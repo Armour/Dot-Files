@@ -63,6 +63,7 @@ source /usr/local/Cellar/dnvm/1.0.0-dev/libexec/dnvm.sh
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-darwin"
 export PATH="$PATH:$HOME/.composer/vendor/bin" # Add Composer to PATH
+export PATH="$PATH:`yarn global bin`" # Add yarn global
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
