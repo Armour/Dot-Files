@@ -1,4 +1,5 @@
-; .editorconfig
+# EditorConfig is awesome:
+# http://editorconfig.org/
 
 root = true
 
@@ -11,21 +12,21 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[**.js]
-path=~/.vim/bundle/js-beautify/js/lib/beautify.js
-bin=node
+[*.{js, jsx}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
-[**.css]
-path=~/.vim/bundle/js-beautify/js/lib/beautify-css.js
+[*.{css, scss, sass, less}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
-[**.html]
+[*.html]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
-[{.travis.yml,package.json}]
+[*.json]
 indent_style = space
-indent_size = 4
+indent_size = 2
+
+[Makefile]
+indent_style = tab

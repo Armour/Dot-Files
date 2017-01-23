@@ -45,34 +45,27 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew bower encode64 gem git git-extras git-flow npm nvm node osx pip pod pyenv python sudo supervisor urltools wd zsh-syntax-highlighting)
+plugins=(autojump brew django encode64 gem git git-extras git-flow node npm osx pip pod pyenv python sudo urltools zsh-syntax-highlighting)
 
 # User configuration
-
-export NVM_DIR=~/.nvm
-# export JAVA_HOME="`/usr/libexec/java_home -v 1.7`"
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-export MONO_GAC_PREFIX="/usr/local" # To use the assemblies from other formulae (mono)
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="$PATH:$(yarn global bin)"
+export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export MONO_GAC_PREFIX="/usr/local" # To use the assemblies from other formulae (mon    o)
 export PGDATA="/usr/local/var/postgres"
 export PYENV_ROOT="/usr/local/var/pyenv"
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-source $ZSH/oh-my-zsh.sh  # Add oh-my-zsh
-source $(brew --prefix nvm)/nvm.sh  # Add NVM to PATH~
-source /usr/local/Cellar/dnvm/1.0.0-dev/libexec/dnvm.sh
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-darwin"
-export PATH="$PATH:$HOME/.composer/vendor/bin" # Add Composer to PATH
-export PATH="$PATH:`yarn global bin`" # Add yarn global
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='mvim'
+  export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -102,18 +95,13 @@ if [[ "$ENABLE_CORRECTION" == "true" ]]; then
 fi
 
 alias sudo='sudo '
-alias zshconf='mvim ~/.zshenv'
-alias vimconf='mvim ~/.vimrc'
+alias zshconf='vim ~/.zshenv'
+alias vimconf='vim ~/.vimrc'
 alias szsh='source ~/.zshenv'
-alias vi='mvim'
-alias vim='mvim'
-alias view='mvim'
+alias vi='vim'
 alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
-alias f='forever -w'
-alias q='exit'
-alias s='nocorrect sudo'
 alias CD='cd'
 alias LS='ls'
 alias LL='ls -l'
@@ -127,38 +115,17 @@ alias rb='ruby'
 alias gs='git status'
 alias gcc='gcc-6'
 alias g++='g++-6'
-alias -s html=mvim
-alias -s java=mvim
-alias -s json=mvim
-alias -s js=mvim
-alias -s sql=mvim
-alias -s rb=mvim
-alias -s h=mvim
-alias -s c=mvim
-alias -s cs=mvim
-alias -s cpp=mvim
-alias -s php=mvim
-alias -s py=mvim
-alias -s txt=mvim
-alias -s css=mvim
-alias -s coffee=mvim
-alias -s scss=mvim
-alias -s sass=mvim
-alias -s ejs=mvim
-alias -s jade=mvim
-alias -s v=mvim
-alias -s tex=mvim
 alias -s md='open'
 alias -s rar='unrar -x'
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
-alias fuck='$(thefuck $(fc -ln -1))'
-alias FUCK='fuck'
-alias ycmc='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf_c.py .'
-alias ycmcpp='cp /Users/armour/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py .'
-alias gsed=sed
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# Support fuck
+eval "$(thefuck --alias)"
+
+# Support autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 [[ -n "$SSH_CLIENT" ]] || export DEFAULT_USER="armour"
