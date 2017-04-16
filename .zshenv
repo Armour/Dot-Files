@@ -45,16 +45,17 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew django encode64 gem git git-extras git-flow node npm osx pip pod pyenv python sudo urltools zsh-syntax-highlighting)
+plugins=(autojump brew django docker docker-compose encode64 git gulp jsontools npm osx pip pod pyenv python redis-cli sudo urltools yarn zsh-syntax-highlighting)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$PATH:$(yarn global bin)"
 export JAVA_HOME=$(/usr/libexec/java_home)
 # export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-export MONO_GAC_PREFIX="/usr/local" # To use the assemblies from other formulae (mon    o)
-export PGDATA="/usr/local/var/postgres"
 export PYENV_ROOT="/usr/local/var/pyenv"
+export MONO_GAC_PREFIX="/usr/local"
+export PGDATA="/usr/local/var/postgres"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 source $ZSH/oh-my-zsh.sh
 
@@ -62,11 +63,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -122,7 +119,7 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
-# Support fuck
+# Support thefuck
 eval "$(thefuck --alias)"
 
 # Support autojump
