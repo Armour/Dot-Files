@@ -671,9 +671,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>325 411 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>469 414 384 129 0 0 1440 900 </string>
+	<string>522 578 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 197 796 473 0 0 1440 900 </string>
+	<string>420 248 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>4 0 785 597 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1598,7 +1598,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-02T02:07:18Z</date>
+	<date>2017-04-28T05:11:11Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1656,7 +1656,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
