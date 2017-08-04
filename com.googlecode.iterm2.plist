@@ -673,9 +673,9 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>522 578 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>420 248 796 473 0 0 1440 900 </string>
+	<string>420 274 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 0 785 597 0 0 1440 877 </string>
+	<string>0 0 785 597 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>183 68 585 451 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_688ECA26-4013-4A8F-9B7C-58A8601083E5</key>
@@ -1579,6 +1579,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/armour/Armours-Dot-Files</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1598,7 +1600,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-28T05:11:11Z</date>
+	<date>2017-07-18T03:56:24Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
