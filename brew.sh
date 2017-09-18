@@ -1,3 +1,4 @@
+brew tap buo/cask-upgrade homebrew/python homebrew/science homebrew/services
 brew update
 brew upgrade
 brew install autojump docker-clean heroku libpng mono nginx node postgresql redis yarn wget python pyenv
