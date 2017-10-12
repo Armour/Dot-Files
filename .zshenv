@@ -50,7 +50,7 @@ plugins=(autojump brew django docker docker-compose encode64 git gulp jsontools 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="$PATH:/usr/local/share/dotnet"
-export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:$(yarn global bin)"
 export JAVA_HOME=$(/usr/libexec/java_home)
 # export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export PYENV_ROOT="/usr/local/var/pyenv"
@@ -95,7 +95,6 @@ alias sudo='sudo '
 alias zshconf='vim ~/.zshenv'
 alias vimconf='vim ~/.vimrc'
 alias szsh='source ~/.zshenv'
-alias update_db='sudo /usr/libexec/locate.updatedb'
 alias vi='vim'
 alias ll='ls -l'
 alias la='ls -a'
@@ -111,17 +110,12 @@ alias LLA='ls -al'
 alias py='python'
 alias rb='ruby'
 alias gs='git status'
-alias gcc='gcc-6'
-alias g++='g++-6'
 alias -s md='open'
 alias -s rar='unrar -x'
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
-
-# Support thefuck
-eval "$(thefuck --alias)"
 
 # Support autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
