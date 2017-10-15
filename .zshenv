@@ -49,14 +49,12 @@ plugins=(autojump django docker encode64 fast-syntax-highlighting git npm osx pi
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$PATH:/usr/local/opt/qt/bin"
 export JAVA_HOME=$(/usr/libexec/java_home)
-# export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export MONO_GAC_PREFIX="/usr/local"
 export PGDATA="/usr/local/var/postgres"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +106,7 @@ alias lal='ls -al'
 alias lla='ls -al'
 alias LAL='ls -al'
 alias LLA='ls -al'
-alias py='python'
+alias py='python3'
 alias rb='ruby'
 alias -s md='open'
 alias -s rar='unrar -x'

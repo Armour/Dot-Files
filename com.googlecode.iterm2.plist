@@ -677,7 +677,7 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>522 578 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>420 235 796 473 0 0 1440 900 </string>
+	<string>71 326 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 785 597 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -833,12 +833,16 @@
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.78423672914505005</real>
+				<real>0.076944907195866108</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.7529793381690979</real>
+				<real>0.31768798828125</real>
 				<key>Red Component</key>
-				<real>0.18858703970909119</real>
+				<real>0.12623523101794376</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1447,7 +1451,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>23D80BA2-D40B-4560-BF9B-9D14CE8AB1DC</string>
 	<key>NoSyncLastTipTime</key>
-	<real>528966284.91925001</real>
+	<real>529052727.36422598</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1535,6 +1539,7 @@
 		<string>0068</string>
 		<string>0069</string>
 		<string>0070</string>
+		<string>0071</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -1610,7 +1615,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-04T07:55:13Z</date>
+	<date>2017-10-13T17:37:05Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1665,6 +1670,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
