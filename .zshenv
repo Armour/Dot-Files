@@ -14,7 +14,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -23,7 +23,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -45,18 +45,19 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew django docker docker-compose encode64 git gulp jsontools npm osx pip pod pyenv python redis-cli sudo urltools yarn zsh-syntax-highlighting)
+plugins=(autojump django docker encode64 fast-syntax-highlighting git npm osx pip pod python redis-cli sudo urltools yarn zsh-autosuggestions)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/usr/local/opt/qt/bin"
 export JAVA_HOME=$(/usr/libexec/java_home)
 # export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-export PYENV_ROOT="/usr/local/var/pyenv"
 export MONO_GAC_PREFIX="/usr/local"
 export PGDATA="/usr/local/var/postgres"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -92,8 +93,8 @@ if [[ "$ENABLE_CORRECTION" == "true" ]]; then
 fi
 
 alias sudo='sudo '
-alias zshconf='vim ~/.zshenv'
 alias vimconf='vim ~/.vimrc'
+alias zshconf='vim ~/.zshenv'
 alias szsh='source ~/.zshenv'
 alias vi='vim'
 alias ll='ls -l'
@@ -109,7 +110,6 @@ alias LAL='ls -al'
 alias LLA='ls -al'
 alias py='python'
 alias rb='ruby'
-alias gs='git status'
 alias -s md='open'
 alias -s rar='unrar -x'
 alias -s gz='tar -xzvf'
