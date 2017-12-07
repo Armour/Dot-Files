@@ -57,6 +57,8 @@ export MONO_GAC_PREFIX="/usr/local"
 export PGDATA="/usr/local/var/postgres"
 
 source $ZSH/oh-my-zsh.sh
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -94,6 +96,8 @@ alias sudo='sudo '
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshenv'
 alias szsh='source ~/.zshenv'
+alias cat='ccat'
+alias diff='colordiff'
 alias vi='vim'
 alias ll='ls -l'
 alias la='ls -a'
