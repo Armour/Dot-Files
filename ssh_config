@@ -1,0 +1,24 @@
+Host azendless
+    hostname 138.197.214.102
+    user armour
+    port 22
+Host do2
+    hostname 165.227.51.28
+    user chong
+    port 22
+Host gpu
+    hostname li.kok.li
+    user chong
+    port 22
+Host do1
+    hostname 138.197.214.102
+    user armour
+    port 22
+Host cocomic
+    hostname 35.193.201.99
+    user armour
+    port 22
+Host gcp1
+    hostname 35.193.201.99
+    user armour
+    port 22

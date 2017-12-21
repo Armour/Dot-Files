@@ -6,3 +6,4 @@ cp ~/.editorconfig .
 cp ~/.gitconfig .
 cp ~/.gitignore_global .
 cp ~/.zshenv .
+cp ~/.ssh/config ssh_config
