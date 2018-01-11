@@ -671,15 +671,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>168 447 231 329 0 0 1440 900 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>833 37 445 77 0 0 1440 900 </string>
+	<string>833 33 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>325 411 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>412 527 616 174 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>522 578 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>71 326 918 381 0 0 1440 900 </string>
+	<string>53 277 1016 512 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 785 597 0 0 1440 900 </string>
+	<string>0 0 1440 877 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>183 68 585 451 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_688ECA26-4013-4A8F-9B7C-58A8601083E5</key>
@@ -1039,9 +1041,9 @@
 				<key>0xf700-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x41</string>
+					<string>[A</string>
 				</dict>
 				<key>0xf701-0x220000</key>
 				<dict>
@@ -1067,9 +1069,9 @@
 				<key>0xf701-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x42</string>
+					<string>[B</string>
 				</dict>
 				<key>0xf702-0x220000</key>
 				<dict>
@@ -1095,9 +1097,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>B</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -1123,9 +1125,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>F</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -1432,6 +1434,8 @@
 			<string>/Users/armour</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -1615,7 +1619,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-13T17:37:05Z</date>
+	<date>2018-01-07T23:51:03Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -1646,7 +1650,6 @@
 	<array>
 		<string>Paste History</string>
 		<string>Recent Directories</string>
-		<string>Command History</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
@@ -1675,7 +1678,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.2</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
