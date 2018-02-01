@@ -1,5 +1,8 @@
-syntax enable
+set nocompatible
+syntax on
+filetype plugin indent on
 
+" set maplearder key
 let mapleader = ","
 let maplocalleader = ","
 
@@ -78,3 +81,6 @@ noremap <C-o> o<esc><CR>
 
 " insert one space without stay in insert mode
 noremap <C-i> i <esc>
+
+" disable auto insert comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
