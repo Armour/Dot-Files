@@ -1,4 +1,4 @@
-brew tap buo/cask-upgrade homebrew/python homebrew/science homebrew/services
+brew tap buo/cask-upgrade caskroom/fonts homebrew/python homebrew/science homebrew/services
 brew update
 brew upgrade
 
