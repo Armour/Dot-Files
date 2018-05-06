@@ -48,13 +48,17 @@ ZSH_THEME="agnoster"
 plugins=(autojump django docker encode64 fast-syntax-highlighting git npm osx pip pod python redis-cli sudo urltools yarn zsh-autosuggestions)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:/usr/local/share/dotnet"
-export PATH="$PATH:$HOME/.rvm/bin"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export MONO_GAC_PREFIX="/usr/local"
 export PGDATA="/usr/local/var/postgres"
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOROOT/bin"
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/usr/local/share/dotnet"
+export PATH="$PATH:$HOME/.rvm/bin"
 
 source $ZSH/oh-my-zsh.sh
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
