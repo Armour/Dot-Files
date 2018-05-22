@@ -1,3 +1,3 @@
 # My-Dot-Files
 
-This repo is used to back up my dot files and some useful files
+This repo is **DEPRECATED** in favor of [Jarvis](https://github.com/Armour/Jarvis)
